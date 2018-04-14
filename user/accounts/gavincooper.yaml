@@ -1,0 +1,11 @@
+email: gavincooper46@yahoo.com
+fullname: 'Gavin Cooper'
+title: Admin
+state: enabled
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+hashed_password: $2y$10$cFF2QlZ1a.sV.ys0A.iE5.a74e2XeevlgMokjzqQVNHsIDAKOldyu
