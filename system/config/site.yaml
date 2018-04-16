@@ -2,13 +2,13 @@ title: Grav                                 # Name of the site
 default_lang: en                            # Default language for site (potentially used by theme)
 
 author:
-  name: John Appleseed                      # Default author name
-  email: 'john@email.com'                   # Default author email
+  name: Gavin Cooper                      # Default author name
+  email: 'gavincooper46@yahoo.com'            # Default author email
 
 taxonomies: [category,tag]                  # Arbitrary list of taxonomy types
 
 metadata:
-  description: 'My Grav Site'               # Site description
+  description: 'Resources for creating user experiences'               # Site description
 
 summary:
   enabled: true                             # enable or disable summary of page
