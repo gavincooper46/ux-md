@@ -1,0 +1,10 @@
+{
+	"folders": [
+		{
+			"path": "my-theme"
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}

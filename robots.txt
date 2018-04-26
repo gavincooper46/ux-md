@@ -1,4 +1,6 @@
 User-agent: *
+
+Disallow: /
 Disallow: /backup/
 Disallow: /bin/
 Disallow: /cache/
@@ -10,3 +12,4 @@ Disallow: /user/
 Disallow: /dev/
 Allow: /user/pages/
 Allow: /user/themes/
+

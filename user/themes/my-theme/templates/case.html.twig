@@ -1,0 +1,25 @@
+{% embed 'partials/base.html.twig' %}
+
+  {% block content %}
+
+    <div class="blog_post">
+      <h1 class="blog_post_title"><a href="{{ page.url }}">{{ page.title }}</a></h1>
+      <div class="blog_post_date">Post on <span>{{ page.date|date("d M") }}</span></div>
+      <div class="blog_post_content">
+        {{ page.content }}
+      </div>
+    </div>
+
+    <p>
+
+      {% if not page.isLast %}
+              <a class="btn" href="{{ page.prevSibling.url }}"><i class="fa fa-angle-left"></i> {{ 'BLOG.ITEM.PREV_POST'|t }}</a>
+      {% endif %}
+  
+      {% if not page.isFirst %}
+          <a class="btn" href="{{ page.nextSibling.url }}">{{ 'BLOG.ITEM.NEXT_POST'|t }} <i class="fa fa-angle-right"></i></a>
+      {% endif %}
+  </p>
+    {% endblock %}
+
+{% endembed %}

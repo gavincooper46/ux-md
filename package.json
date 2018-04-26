@@ -1,0 +1,51 @@
+{
+  "name": "ux-dev",
+  "version": "1.0.0",
+  "description": "Development site for UX strategy site",
+  "main": "index.html",
+  "author": "Gavin Cooper",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gavincooper46/ux-md/issues"
+  },
+  "homepage": "http://uxwork.co",
+  "scripts": {
+    "dev": "npm-run-all --parallel dev:*",
+    "dev:sass": "node-sass user/themes/quark/scss/custom.scss --output-style expanded --output user/themes/quark/css/",
+    "prod": "npm-run-all --parallel prod:*",
+    "prod:content": "cp -R user/pages/ ../ux-prod/user/pages/",
+    "prod:html": "cp -R user/themes/quark/templates/ ../ux-prod/user/themes/quark/templates/",
+    "prod:imagecompress": "imagemin user/themes/ux/images/**/**.* --out-dir=../ux-prod/images/",
+    "prod:sass": "node-sass user/themes/quark/scss/theme.scss --output-style compressed --output ../ux-prod/user/themes/quark/css-compiled/",
+    "postprod:sassauto": "postcss -use autoprefixer ../ux-prod/user/themes/quark/css-compiled/theme.css -d ../ux-prod/user/themes/quark/css-compiled/theme.css",
+    "watch:sass": "nodemon -e scss -x 'npm run prod:sass'",
+    "prod:js": "uglifyjs-folder user/themes/quark/js/ -o ../ux-prod/user/themes/quark/js/script.min.js --source-map ../ux-prod/user/themes/quark/js/script.min.js.map"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gavincooper46/ux-md.git"
+  },
+  "keywords": [
+    "ux",
+    "ux strategy",
+    "agile",
+    "design",
+    "ui",
+    "design"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^7.2.6",
+    "cssnano": "^3.10.0",
+    "imagemin": "^5.3.1",
+    "imagemin-cli": "^3.0.0",
+    "node-sass": "^4.7.2",
+    "nodemon": "^1.15.0",
+    "npm-run-all": "^4.1.2",
+    "postcss-cli": "^5.0.0",
+    "svg-sprite": "^1.3.7",
+    "uglify-js": "^3.3.10",
+    "uglifyjs-folder": "^1.5.0",
+  },
+  "dependencies": {
+  }
+}

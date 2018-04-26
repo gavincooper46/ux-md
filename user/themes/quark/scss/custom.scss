@@ -1,0 +1,28 @@
+
+// Variables
+$fontheads: 'Archivo Black', sans-serif;;
+$fontbody: 'Archivo Narrow', sans-serif;;
+
+
+// Typography
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Archivo|Archivo+Black|Archivo+Narrow|Lobster');
+html, body, p {font-family:$fontbody;}
+p {font-size:1rem;}
+h1, h2, h3, h4, h5, h6 {font-family: $fontheads;}
+
+
+
+
+
+
+
+/*
+
+Other google fonts: 
+
+font-family: 'Archivo Narrow', sans-serif;
+font-family: 
+font-family: 'Lobster', cursive;
+font-family: 'Abril Fatface', cursive;
+*/
+
