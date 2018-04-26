@@ -16,7 +16,9 @@
 
 </head>
 <body>
-	
+
+{% block top %}
+
 <header class="doc_header clearfix">
 	<div class="standard_width">
 		<div class="page_title">
@@ -41,11 +43,11 @@
 
 	</div>
 </header>
-
-
+{% endblock %}
+{% block main %}
 {% block content %}
 {{ page.content }}
-{%endblock%}
-
+{% endblock %}
+{% endblock %}
 </body>
 </html>
