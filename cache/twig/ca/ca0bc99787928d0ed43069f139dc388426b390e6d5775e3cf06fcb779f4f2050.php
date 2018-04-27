@@ -10,6 +10,8 @@ class __TwigTemplate_34b251b5087aaeee366e867a58986a0165654c9a526b565f5d74ed5882d
         $this->parent = false;
 
         $this->blocks = array(
+            'top' => array($this, 'block_top'),
+            'main' => array($this, 'block_main'),
             'content' => array($this, 'block_content'),
         );
     }
@@ -51,12 +53,27 @@ class __TwigTemplate_34b251b5087aaeee366e867a58986a0165654c9a526b565f5d74ed5882d
 
 </head>
 <body>
-\t
+
+";
+        // line 20
+        $this->displayBlock('top', $context, $blocks);
+        // line 47
+        $this->displayBlock('main', $context, $blocks);
+        // line 51
+        echo "</body>
+</html>";
+    }
+
+    // line 20
+    public function block_top($context, array $blocks = array())
+    {
+        // line 21
+        echo "
 <header class=\"doc_header clearfix\">
 \t<div class=\"standard_width\">
 \t\t<div class=\"page_title\">
 \t\t\t<a href=\"";
-        // line 23
+        // line 25
         echo (((($context["base_url"] ?? null) == "")) ? ("/") : (($context["base_url"] ?? null)));
         echo "\">";
         echo $this->getAttribute($this->getAttribute(($context["config"] ?? null), "site", array()), "title", array());
@@ -69,18 +86,18 @@ class __TwigTemplate_34b251b5087aaeee366e867a58986a0165654c9a526b565f5d74ed5882d
 <div class=\"page_menu\">
 \t<ul>
 \t\t";
-        // line 31
+        // line 33
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute(($context["pages"] ?? null), "children", array()), "visible", array()));
         foreach ($context['_seq'] as $context["_key"] => $context["page"]) {
-            // line 32
+            // line 34
             echo "\t\t<li>
 \t\t\t<a href=\"";
-            // line 33
+            // line 35
             echo $this->getAttribute($context["page"], "url", array());
             echo "\">
 \t\t\t\t";
-            // line 34
+            // line 36
             echo $this->getAttribute($context["page"], "menu", array());
             echo "
 \t\t\t</a>
@@ -90,31 +107,25 @@ class __TwigTemplate_34b251b5087aaeee366e867a58986a0165654c9a526b565f5d74ed5882d
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['page'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 38
+        // line 40
         echo "
 \t \t</ul>
 
 
 \t</div>
 </header>
-
-
 ";
-        // line 46
-        $this->displayBlock('content', $context, $blocks);
-        // line 49
-        echo "
-</body>
-</html>";
     }
 
-    // line 46
+    // line 47
+    public function block_main($context, array $blocks = array())
+    {
+        // line 48
+        $this->displayBlock('content', $context, $blocks);
+    }
+
     public function block_content($context, array $blocks = array())
     {
-        // line 47
-        echo $this->getAttribute(($context["page"] ?? null), "content", array());
-        echo "
-";
     }
 
     public function getTemplateName()
@@ -129,7 +140,7 @@ class __TwigTemplate_34b251b5087aaeee366e867a58986a0165654c9a526b565f5d74ed5882d
 
     public function getDebugInfo()
     {
-        return array (  115 => 47,  112 => 46,  106 => 49,  104 => 46,  94 => 38,  84 => 34,  80 => 33,  77 => 32,  73 => 31,  60 => 23,  48 => 15,  45 => 14,  43 => 13,  31 => 10,  20 => 1,);
+        return array (  124 => 48,  121 => 47,  111 => 40,  101 => 36,  97 => 35,  94 => 34,  90 => 33,  77 => 25,  71 => 21,  68 => 20,  63 => 51,  61 => 47,  59 => 20,  50 => 15,  47 => 14,  45 => 13,  33 => 10,  22 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -160,7 +171,9 @@ class __TwigTemplate_34b251b5087aaeee366e867a58986a0165654c9a526b565f5d74ed5882d
 
 </head>
 <body>
-\t
+
+{% block top %}
+
 <header class=\"doc_header clearfix\">
 \t<div class=\"standard_width\">
 \t\t<div class=\"page_title\">
@@ -185,12 +198,11 @@ class __TwigTemplate_34b251b5087aaeee366e867a58986a0165654c9a526b565f5d74ed5882d
 
 \t</div>
 </header>
-
-
+{% endblock %}
+{% block main %}
 {% block content %}
-{{ page.content }}
-{%endblock%}
-
+{% endblock %}
+{% endblock %}
 </body>
 </html>", "partials/base.html.twig", "/Users/taizocooper/Dropbox/UX-MD/ux-dev/user/themes/my-theme/templates/partials/base.html.twig");
     }
