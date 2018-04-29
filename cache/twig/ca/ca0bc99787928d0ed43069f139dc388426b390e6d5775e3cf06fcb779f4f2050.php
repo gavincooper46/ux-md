@@ -57,9 +57,9 @@ class __TwigTemplate_34b251b5087aaeee366e867a58986a0165654c9a526b565f5d74ed5882d
 ";
         // line 20
         $this->displayBlock('top', $context, $blocks);
-        // line 47
+        // line 46
         $this->displayBlock('main', $context, $blocks);
-        // line 51
+        // line 50
         echo "</body>
 </html>";
     }
@@ -111,21 +111,23 @@ class __TwigTemplate_34b251b5087aaeee366e867a58986a0165654c9a526b565f5d74ed5882d
         echo "
 \t \t</ul>
 
-
 \t</div>
 </header>
 ";
     }
 
-    // line 47
+    // line 46
     public function block_main($context, array $blocks = array())
     {
-        // line 48
+        // line 47
+        echo "\t";
         $this->displayBlock('content', $context, $blocks);
     }
 
     public function block_content($context, array $blocks = array())
     {
+        // line 48
+        echo "\t";
     }
 
     public function getTemplateName()
@@ -140,7 +142,7 @@ class __TwigTemplate_34b251b5087aaeee366e867a58986a0165654c9a526b565f5d74ed5882d
 
     public function getDebugInfo()
     {
-        return array (  124 => 48,  121 => 47,  111 => 40,  101 => 36,  97 => 35,  94 => 34,  90 => 33,  77 => 25,  71 => 21,  68 => 20,  63 => 51,  61 => 47,  59 => 20,  50 => 15,  47 => 14,  45 => 13,  33 => 10,  22 => 1,);
+        return array (  130 => 48,  123 => 47,  120 => 46,  111 => 40,  101 => 36,  97 => 35,  94 => 34,  90 => 33,  77 => 25,  71 => 21,  68 => 20,  63 => 50,  61 => 46,  59 => 20,  50 => 15,  47 => 14,  45 => 13,  33 => 10,  22 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -195,13 +197,12 @@ class __TwigTemplate_34b251b5087aaeee366e867a58986a0165654c9a526b565f5d74ed5882d
 
 \t \t</ul>
 
-
 \t</div>
 </header>
 {% endblock %}
 {% block main %}
-{% block content %}
-{% endblock %}
+\t{% block content %}
+\t{% endblock %}
 {% endblock %}
 </body>
 </html>", "partials/base.html.twig", "/Users/taizocooper/Dropbox/UX-MD/ux-dev/user/themes/my-theme/templates/partials/base.html.twig");

@@ -1,0 +1,58 @@
+1525468525
+a:2:{s:7:"content";s:1811:"<div class="standard_width">
+    <div class="features">
+      <h2>Features</h2>
+<h3>This is a non-inclusive smattering of them</h3>
+      <div class="features_list clearfix">
+                <div class="feature">
+          <i class="fa fa-fw fa-text-height"></i>
+          <h4>Markdown Syntax</h4>
+        </div>
+                <div class="feature">
+          <i class="fa fa-fw fa-code"></i>
+          <h4>Twig Templating</h4>
+        </div>
+                <div class="feature">
+          <i class="fa fa-fw fa-rocket"></i>
+          <h4>Smart Caching</h4>
+        </div>
+                <div class="feature">
+          <i class="fa fa-fw fa-tags"></i>
+          <h4>Flexible Taxonomies</h4>
+        </div>
+                <div class="feature">
+          <i class="fa fa-fw fa-cloud-download"></i>
+          <h4>Simple Install</h4>
+        </div>
+                <div class="feature">
+          <i class="fa fa-fw fa-cogs"></i>
+          <h4>Powerful Plugins</h4>
+        </div>
+                <div class="feature">
+          <i class="fa fa-fw fa-dashboard"></i>
+          <h4>Intuitive UI</h4>
+        </div>
+                <div class="feature">
+          <i class="fa fa-fw fa-file-text"></i>
+          <h4>File-Based</h4>
+        </div>
+                <div class="feature">
+          <i class="fa fa-fw fa-bookmark"></i>
+          <h4>Documentation</h4>
+        </div>
+                <div class="feature">
+          <i class="fa fa-fw fa-github"></i>
+          <h4>On Github</h4>
+        </div>
+                <div class="feature">
+          <i class="fa fa-fw fa-html5"></i>
+          <h4>Responsive Design</h4>
+        </div>
+                <div class="feature">
+          <i class="fa fa-fw fa-heart"></i>
+          <h4>Awesomazing</h4>
+        </div>
+              </div>
+    </div>
+  </div>
+  ";s:12:"content_meta";N;}
